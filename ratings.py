@@ -20,7 +20,8 @@ def get_ratings(filename):
 
 ratings_dict = get_ratings('scores.txt')
 
-items = sorted(list(ratings_dict.items()))
+items = sorted(ratings_dict.items())
+# print (type(ratings_dict.items()))
 
-for item in items:
-    print('{} is rated at {}.'.format(item[0], item[1])) 
+for restaurant, rating in items:
+    print('{} is rated at {}.'.format(restaurant, rating)) 
