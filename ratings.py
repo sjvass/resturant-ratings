@@ -20,6 +20,16 @@ def get_ratings(filename):
 
 ratings_dict = get_ratings('scores.txt')
 
+def get_user_rating():
+    user_restaurant = input("Please enter a restaurant name: ")
+    user_rating = input("Enter your restaurant's rating: ")
+
+    return (user_restaurant, user_rating)
+
+user_ratings = get_user_rating()
+
+ratings_dict[user_ratings[0]] = user_ratings[1]
+
 items = sorted(ratings_dict.items())
 # print (type(ratings_dict.items()))
 
